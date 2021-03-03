@@ -11,6 +11,13 @@
       integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
       crossorigin="anonymous"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
@@ -28,35 +35,36 @@
     <div class="error" id="errorFilm" style="color: red"></div>
 
     <br />
+    <div class="container">
+      <form id="form" class="row">
+        <label for="antall">Antall</label>
+        <input type="number" id="antall" name="antall" min="0" /><br />
 
-    <form id="form">
-      <label for="antall">Antall</label>
-      <input type="number" id="antall" name="antall" min="0" /><br />
+        <div class="error" id="errorAntall" style="color: red"></div>
 
-      <div class="error" id="errorAntall" style="color: red"></div>
+        <label for="fnavn">Fornavn</label>
+        <input type="text" id="fnavn" name="fnavn" /><br />
 
-      <label for="fnavn">Fornavn</label>
-      <input type="text" id="fnavn" name="fnavn" /><br />
+        <div class="error" id="errorFornavn" style="color: red"></div>
 
-      <div class="error" id="errorFornavn" style="color: red"></div>
+        <label for="enavn">Etternavn</label>
+        <input type="text" id="enavn" name="enavn" /><br />
 
-      <label for="enavn">Etternavn</label>
-      <input type="text" id="enavn" name="enavn" /><br />
+        <div class="error" id="errorEtternavn" style="color: red"></div>
 
-      <div class="error" id="errorEtternavn" style="color: red"></div>
+        <label for="telefon">Telefon Nummer</label>
+        <input type="text" id="telefonnr" name="telefonnr" /><br />
 
-      <label for="telefon">Telefon Nummer</label>
-      <input type="text" id="telefonnr" name="telefonnr" /><br />
+        <div class="error" id="errorTelefon" style="color: red"></div>
 
-      <div class="error" id="errorTelefon" style="color: red"></div>
+        <label for="Epost">Epost</label>
+        <input type="text" id="epost" name="epost" /><br />
 
-      <label for="Epost">Epost</label>
-      <input type="text" id="epost" name="epost" /><br />
+        <div class="error" id="errorEpost" style="color: red"></div>
 
-      <div class="error" id="errorEpost" style="color: red"></div>
-
-      <button type="submit">Kjøp billett</button>
-    </form>
+        <button type="submit">Kjøp billett</button>
+      </form>
+    </div>
 
     <br />
     <br />
