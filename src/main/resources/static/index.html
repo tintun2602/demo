@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js";
+      integrity =
+        "sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==";
+      crossorigin = "anonymous";
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>s354358</title>
@@ -23,66 +29,43 @@
   <body>
     <h1>Bestilling av kinobilleter</h1>
     <br />
-    <label for="filmer">Velg film:</label>
-
-    <select name="film" id="film">
-      <option value="filmer">Velg film her</option>
-      <option value="batman">Batman</option>
-      <option value="wonderwoman">Wonderwoman</option>
-      <option value="spiderman">Spiderman</option>
-    </select>
-
-    <div class="error" id="errorFilm" style="color: red"></div>
 
     <br />
     <div class="container">
-      <form id="form" class="row">
-        <label for="antall">Antall</label>
-        <input type="number" id="antall" name="antall" min="0" /><br />
+      <form id="form">
+        <label for="filmer">Velg film:</label>
 
-        <div class="error" id="errorAntall" style="color: red"></div>
+        <select name="film" id="film" required>
+          <option value="filmer" selected>Velg film her</option>
+          <option value="batman">Batman</option>
+          <option value="wonderwoman">Wonderwoman</option>
+          <option value="spiderman">Spiderman</option>
+        </select>
+
+        <label for="antall">Antall</label>
+        <input type="number" id="antall" name="antall" min="0" required /><br />
 
         <label for="fnavn">Fornavn</label>
-        <input type="text" id="fnavn" name="fnavn" /><br />
-
-        <div class="error" id="errorFornavn" style="color: red"></div>
+        <input type="text" id="fnavn" name="fnavn" required /><br />
 
         <label for="enavn">Etternavn</label>
-        <input type="text" id="enavn" name="enavn" /><br />
-
-        <div class="error" id="errorEtternavn" style="color: red"></div>
+        <input type="text" id="enavn" name="enavn" required /><br />
 
         <label for="telefon">Telefon Nummer</label>
-        <input type="text" id="telefonnr" name="telefonnr" /><br />
-
-        <div class="error" id="errorTelefon" style="color: red"></div>
+        <input type="text" id="telefonnr" name="telefonnr" required /><br />
 
         <label for="Epost">Epost</label>
-        <input type="text" id="epost" name="epost" /><br />
-
-        <div class="error" id="errorEpost" style="color: red"></div>
+        <input type="text" id="epost" name="epost" required /><br />
 
         <button type="submit">Kjøp billett</button>
+        <button type="reset">Slett alle billetter</button>
       </form>
+      <p id="melding"></p>
     </div>
 
     <br />
     <br />
 
-    <h2>Alle billetter</h2>
-    <table>
-      <thead id="thead" style="visibility: hidden">
-        <th>Film</th>
-        <th>Antall</th>
-        <th>Fornavn</th>
-        <th>Etternavn</th>
-        <th>Telefon Nr</th>
-        <th>Epost</th>
-      </thead>
-      <tbody id="liste"></tbody>
-    </table>
-
-    <button id="resetbtn">Slett alle billetter</button>
     <script src="app.js"></script>
   </body>
 </html>
