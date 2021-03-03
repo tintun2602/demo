@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>s354358</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <h1>Bestilling av kinobilleter</h1>
+    <br />
+    <label for="filmer">Velg film:</label>
+
+    <select name="film" id="film">
+      <option value="filmer">Velg film her</option>
+      <option value="batman">Batman</option>
+      <option value="wonderwoman">Wonderwoman</option>
+      <option value="spiderman">Spiderman</option>
+    </select>
+
+    <div class="error" id="errorFilm" style="color: red"></div>
+
+    <br />
+
+    <form id="form">
+      <label for="antall">Antall</label>
+      <input type="number" id="antall" name="antall" min="0" /><br />
+
+      <div class="error" id="errorAntall" style="color: red"></div>
+
+      <label for="fnavn">Fornavn</label>
+      <input type="text" id="fnavn" name="fnavn" /><br />
+
+      <div class="error" id="errorFornavn" style="color: red"></div>
+
+      <label for="enavn">Etternavn</label>
+      <input type="text" id="enavn" name="enavn" /><br />
+
+      <div class="error" id="errorEtternavn" style="color: red"></div>
+
+      <label for="telefon">Telefon Nummer</label>
+      <input type="text" id="telefonnr" name="telefonnr" /><br />
+
+      <div class="error" id="errorTelefon" style="color: red"></div>
+
+      <label for="Epost">Epost</label>
+      <input type="text" id="epost" name="epost" /><br />
+
+      <div class="error" id="errorEpost" style="color: red"></div>
+
+      <button type="submit">Kjøp billett</button>
+    </form>
+
+    <br />
+    <br />
+
+    <h2>Alle billetter</h2>
+    <table>
+      <thead id="thead" style="visibility: hidden">
+        <th>Film</th>
+        <th>Antall</th>
+        <th>Fornavn</th>
+        <th>Etternavn</th>
+        <th>Telefon Nr</th>
+        <th>Epost</th>
+      </thead>
+      <tbody id="liste"></tbody>
+    </table>
+
+    <button id="resetbtn">Slett alle billetter</button>
+    <script src="app.js"></script>
+  </body>
+</html>
