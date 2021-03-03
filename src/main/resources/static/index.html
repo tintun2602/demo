@@ -26,41 +26,86 @@
     />
   </head>
 
-  <body>
-    <h1>Bestilling av kinobilleter</h1>
-    <br />
-
-    <br />
+  <body class="bg-muted">
     <div class="container">
-      <form id="form">
-        <label for="filmer">Velg film:</label>
+      <div class="text-primary">
+        <h1 class="page-header">Bestilling av kinobiletter</h1>
+      </div>
+    </div>
 
-        <select name="film" id="film" required>
-          <option value="filmer" selected>Velg film her</option>
-          <option value="batman">Batman</option>
-          <option value="wonderwoman">Wonderwoman</option>
-          <option value="spiderman">Spiderman</option>
-        </select>
+    <br />
 
-        <label for="antall">Antall</label>
-        <input type="number" id="antall" name="antall" min="0" required /><br />
+    <div class="container">
+      <div class="text-primary">
+        <form id="form">
+          <label for="filmer" class="pull-left">Velg film:</label>
+          <select name="film" id="film" required class="pull-right">
+            <option value="filmer" selected>Velg film her</option>
+            <option value="batman">Batman</option>
+            <option value="wonderwoman">Wonderwoman</option>
+            <option value="spiderman">Spiderman</option>
+          </select>
+          <br />
+          <br />
 
-        <label for="fnavn">Fornavn</label>
-        <input type="text" id="fnavn" name="fnavn" required /><br />
+          <label for="antall" class="pull-left">Antall</label>
+          <input
+            type="number"
+            id="antall"
+            name="antall"
+            min="0"
+            required
+            class="pull-right"
+          /><br />
+          <br />
 
-        <label for="enavn">Etternavn</label>
-        <input type="text" id="enavn" name="enavn" required /><br />
+          <label for="fnavn">Fornavn</label>
+          <input
+            type="text"
+            id="fnavn"
+            name="fnavn"
+            required
+            class="pull-right"
+          /><br />
+          <br />
 
-        <label for="telefon">Telefon Nummer</label>
-        <input type="text" id="telefonnr" name="telefonnr" required /><br />
+          <label for="enavn">Etternavn</label>
+          <input
+            type="text"
+            id="enavn"
+            name="enavn"
+            required
+            class="pull-right"
+          /><br />
+          <br />
 
-        <label for="Epost">Epost</label>
-        <input type="text" id="epost" name="epost" required /><br />
+          <label for="telefon">Telefon Nummer</label>
+          <input
+            type="text"
+            id="telefonnr"
+            name="telefonnr"
+            required
+            class="pull-right"
+          /><br />
+          <br />
 
-        <button type="submit">Kjøp billett</button>
-        <button type="reset">Slett alle billetter</button>
-      </form>
-      <p id="melding"></p>
+          <label for="Epost">Epost</label>
+          <input
+            type="text"
+            id="epost"
+            name="epost"
+            required
+            class="pull-right"
+          />
+          <p></p>
+
+          <button type="submit" class="btn btn-primary">Kjøp billett</button>
+          <button type="reset" class="btn btn-primary">
+            Slett alle billetter
+          </button>
+        </form>
+      </div>
+      <p id="melding" class="text-primary"></p>
     </div>
 
     <br />
