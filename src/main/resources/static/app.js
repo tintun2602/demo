@@ -1,4 +1,6 @@
 
+
+
 // SELECTOR
 const form = document.querySelector('form'); 
 
@@ -37,9 +39,11 @@ $.post('/lagre', kunde, function () {
 function hentAlle() {
     $.get('/biletter', function(data){
     formaterData(data); 
-
     });
+    
 }
+
+
 
 const melding = document.getElementById('melding'); 
 

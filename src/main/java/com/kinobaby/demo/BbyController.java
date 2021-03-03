@@ -14,7 +14,7 @@ public class BbyController {
 	@PostMapping("/lagre")
 	public void visResultat(Biletter inputFilm) {
 		filmListe.add(inputFilm);
-		
+
 	}
 
 	@GetMapping("/biletter")
