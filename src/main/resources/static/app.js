@@ -46,7 +46,6 @@ function hentAlle() {
 
 
 const melding = document.getElementById('melding'); 
-
 function formaterData(kunder) {
     for(const kunde of kunder) {
         melding.innerHTML = /*html*/`
